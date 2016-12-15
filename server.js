@@ -6,10 +6,10 @@ const PORT = process.env.PORT || 3000; // heroku will pass the port value to thi
 
 //open weather app dung http, khong dung https
 app.use(function (req, res, next){
-	if (req.headers['x-forwarded-proto'] === 'http'){
-		next();
-	} else {
+	if (req.headers['x-forwarded-proto'] === 'https'){
 		res.redirect('http://' + req.hostname + req.url);
+	} else {
+		next();
 	}
 });
 
