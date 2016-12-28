@@ -10,6 +10,7 @@ var React = require('react');
 //   }
 // });
 
+
 //có thể dùng stateless component cho About như sau
 var About = (props) => {
   return (
