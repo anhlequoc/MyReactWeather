@@ -14,11 +14,17 @@ var Nav = require('Nav');
 // });
 
 var Main = (props) => {
+  // console.log(props.children);
   return (
     <div>
       <Nav></Nav>
-      <h3>Main Component</h3>
-      {props.children} {/*bỏ this đi*/}
+      <div className="row">
+        <div className="columns medium-6 large-4">
+          {props.children}
+        </div>
+      </div>
+      {/* <h3>Main Component</h3> */}
+      {/* {props.children} {/*bỏ this đi*/}
     </div>
   );
 };
