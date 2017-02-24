@@ -19,7 +19,7 @@ var Main = (props) => {
     <div>
       <Nav></Nav>
       <div className="row">
-        <div className="columns medium-6 large-4">
+        <div className="columns medium-6 large-4 small-centered"> {/*columns tell foundation that this div is column*/}
           {props.children}
         </div>
       </div>
