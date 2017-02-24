@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+var webpack = require('webpack');//add from section 7 foundation clip 02
 
 module.exports = {
 	entry: [
@@ -6,6 +6,7 @@ module.exports = {
 		'script!foundation-sites/dist/foundation.min.js',
 		'./app/app.jsx', //tell webpack where to start compiling
 	],
+	//add from section 7 foundation clip 02
 	externals: {
 		jquery: 'jQuery',
 	},
@@ -15,6 +16,7 @@ module.exports = {
 			'jQuery': 'jquery'
 		})
 	],
+	//
 	output: {
 		path: __dirname,
 		filename: './public/bundle.js'
