@@ -1,5 +1,5 @@
 var React = require('react');
-
+var {Link} = require('react-router');
 // var About = React.createClass({
 //   render: function(){
 //     return (
@@ -15,7 +15,16 @@ var React = require('react');
 var About = (props) => {
   return (
     <div>
-        <h4>About Component</h4>
+        <h3 className="text-center">About Page</h3>
+        <p>Simple weather application built by React.JS</p>
+        <ul>
+          <li>
+            <a href="https://github.com/anhlequoc/MyReactWeather">Source</a>
+          </li>
+          <li>
+            <a href="http://openweathermap.org">Open Weather Map API</a>
+          </li>
+        </ul>
     </div>
   );
 };
