@@ -1,4 +1,4 @@
-var names = ['anh', 'le', 'jane', 'quynh'];
+// var names = ['anh', 'le', 'jane', 'quynh'];
 //
 // names.forEach(function(name) {
 //   console.log('forEach', name);
@@ -13,9 +13,13 @@ var names = ['anh', 'le', 'jane', 'quynh'];
 // names.forEach((name) => console.log(name)); //bất kỳ câu lệnh nào chạy ở đây cũng là return
 
 var returnMe = (name) => name + "!";
-console.log(returnMe("Anh Le"));
+console.log(returnMe("Anh Le")); //whatever you define will be automatically get returned
 
-//sự khác biệt giữa arrow function và anonymous function
+/* sự khác biệt giữa arrow function và anonymous function
+  - Anonymous functions have a this binding
+  - Arrow function take on their parents this binding
+*/
+var names = ['anh', 'le', 'jane', 'quynh'];
 var Person = {
   name: "Anh Le",
   greet: function(){
@@ -36,7 +40,7 @@ undefinedsays hi to jane
 undefinedsays hi to quynh
 
 -> nguyên nhân do dùng "this" như trên, nó sẽ không refer đến identity của Person object nữa, vì nó đang ở trong 1 anonymous function
--> dùng arrow function có thể fix cái này vì arrow function không upate this keyword
+-> dùng arrow function như ở greet2() để fix cái này vì arrow function không upate this keyword
 */
 Person.greet2();
 
